@@ -39,8 +39,10 @@ print('正在匹配每门成绩的课程信息...')
 j = 0
 
 
+# 采用iloc非常慢,学号可能出错
 def match_course_info(row):
     global j
+    j = j + 1
     print(str(j) + '/' + str(len(grades)))
     try:
         return courses[courses['id'] == int(row.course_id)].iloc[0][[
@@ -159,7 +161,7 @@ print('删除冗余列完成')
 
 grades.columns = ['sid', 'year', 'grade', 'learning_type', 'course_id', 'name',
                   'course_type', 'credit', 'instructor', 'course_college', 'course_major', 'GPA',
-                  'weighed_gpa']
+                  'weighed_gpa', 'stu_college']
 
 print('列名重命名完成')
 
