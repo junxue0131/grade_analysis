@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="363c9791-5305-43fa-a97f-ac29bfddbd69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GPA/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/course/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/credit/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ka_ji/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/misc/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GPA/college_average_GPA.py" beforeDir="false" afterPath="$PROJECT_DIR$/GPA/college_average_GPA.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GPA/stu_GPA.py" beforeDir="false" afterPath="$PROJECT_DIR$/GPA/stu_GPA.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/hot_course_mean_grade.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/hot_course_mean_grade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credit/credit.py" beforeDir="false" afterPath="$PROJECT_DIR$/credit/credit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_reduction.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_reduction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ka_ji/ka_ji.py" beforeDir="false" afterPath="$PROJECT_DIR$/ka_ji/ka_ji.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/misc/misc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data_reduction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="128" selection-start-line="128" selection-end-line="132" selection-end-column="25" />
+            <state relative-caret-position="306">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#41#60#0" expanded="true" />
               </folding>
@@ -101,31 +88,6 @@
             <path>
               <item name="grade_analysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="grade_analysis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grade_analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grade_analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="course" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grade_analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grade_analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="credit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grade_analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grade_analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="GPA" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grade_analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grade_analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="ka_ji" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grade_analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grade_analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="misc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -199,18 +161,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564566156857</updated>
-      <workItem from="1564566158532" duration="15833000" />
+      <workItem from="1564566158532" duration="19532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15833000" />
+    <option name="totallyTimeSpent" value="19532000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-7" width="1480" height="878" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964838" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24964838" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -225,7 +187,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" weight="0.32981715" />
+      <window_info anchor="right" id="SciView" visible="true" weight="0.32911393" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -346,8 +308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data_reduction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="128" selection-start-line="128" selection-end-line="132" selection-end-column="25" />
+        <state relative-caret-position="306">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#41#60#0" expanded="true" />
           </folding>
