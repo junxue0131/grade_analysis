@@ -1,9 +1,14 @@
 import pandas as pd
+import os
 
-path = 'C:/Users/Xue/Desktop/ing/第二学期成绩分析/'
 
-grades = pd.read_csv(path + 'final_grade_table.csv')
+dirname = os.getcwd()
 
+dirname = dirname.replace('\\', '/')
+
+grades = pd.read_excel(dirname + '/res/final_grade_table.xlsx')
+
+print('正在生成学分情况...')
 
 # 整合学分数据
 credit_table = grades[['sid', 'year', 'stu_college', 'credit']]
@@ -21,9 +26,9 @@ credit_table = pd.DataFrame({'sid': students, 'year': year, 'college': colleges,
 
 # 计算各学院各年级平均学分
 # TODO:这里的算法可能有些问题，是不是考虑用典型值替代平均值（因为数据有缺失）
-credit_table.groupby(['college', 'year'])['credit_sum'].mean().to_excel(path+'res/credit/college_year_credit.xlsx')
+credit_table.groupby(['college', 'year'])['credit_sum'].mean().to_excel(dirname + '/res/credit/credit.xlsx')
 
 # 计算个人所修学分
-credit_table.to_excel(path+'/res/credit/stu_credit.xlsx')
+credit_table.to_excel(dirname + '/res/credit/credit.xlsx')
 
 print('学分情况处理完毕')

@@ -1,8 +1,12 @@
 import pandas as pd
+import os
 
-path = 'C:/Users/Xue/Desktop/ing/第二学期成绩分析/'
 
-grades = pd.read_csv(path + 'final_grade_table.csv')
+dirname = os.getcwd()
+
+dirname = dirname.replace('\\', '/')
+
+grades = pd.read_excel(dirname + '/res/final_grade_table.xlsx')
 
 print('正在生成学生GPA...')
 
@@ -16,7 +20,7 @@ j = 0
 # 计算GPA
 # TODO:排除课程比较少的人的GPA结果
 for i in students:
-    print(str(j)+'/'+str(len(students)))
+    print(str(j)+'/'+str(len(students)), end='\r')
     j = j + 1
     credit_sum = grades[grades['sid'] == i]['credit'].sum()
     credit_sum_ms = grades[
@@ -40,6 +44,6 @@ for i in students:
 stu_GPA = pd.DataFrame({'sid': students, 'gpa': stu_gpa, 'ms_gpa': stu_ms_gpa})
 
 
-stu_GPA.to_csv(path+'/res/stu_gpa.csv')
+stu_GPA.to_excel(dirname+'/res/gpa/stu_gpa.xlsx')
 
 print('学生GPA生成完毕')

@@ -1,8 +1,13 @@
 import pandas as pd
+import os
 
-path = 'C:/Users/Xue/Desktop/ing/第二学期成绩分析/'
+dirname = os.getcwd()
 
-grades = pd.read_csv(path + 'final_grade_table.csv')
+dirname = dirname.replace('\\', '/')
+
+grades = pd.read_excel(dirname + '/res/final_grade_table.xlsx')
+
+print('正在生成卡绩情况...')
 
 
 # 计算卡绩
@@ -53,8 +58,6 @@ def get_no_ka_ji(row):
         return 0
 
 
-print('正在生成学生卡绩情况...')
-
 # 计算每个人的卡绩情况
 students = grades['sid'].value_counts().index.to_list()
 
@@ -63,13 +66,13 @@ no_ka_ji_num = []
 j = 0
 
 for i in students:
-    print(str(j)+'/'+str(len(students)))
+    print(str(j) + '/' + str(len(students)), end='\r')
     j = j + 1
     ka_ji_num.append(grades[grades['sid'] == i].apply(get_ka_ji, axis=1).sum())
     no_ka_ji_num.append(grades[grades['sid'] == i].apply(get_no_ka_ji, axis=1).sum())
 
 stu_ka_ji = pd.DataFrame({'stu': students, 'ka_ji_num': ka_ji_num, 'no_ka_ji_num': no_ka_ji_num})
 
-stu_ka_ji.to_excel(path+'/res/ka_ji.xlsx')
+stu_ka_ji.to_excel(dirname + '/res/ka_ji/ka_ji.xlsx')
 
 print('卡绩情况生成完毕')

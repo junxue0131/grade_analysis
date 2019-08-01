@@ -1,10 +1,11 @@
 import pandas as pd
+import os
 
-path = 'C:/Users/Xue/Desktop/ing/第二学期成绩分析/'
+dirname = os.getcwd()
 
-grades = pd.read_csv(path + 'final_grade_table.csv')
+grades = pd.read_excel(dirname.replace('\\', '/') + '/res/final_grade_table.xlsx')
 
-print('正在生成课程给分情况')
+print('正在生成课程给分情况...')
 
 
 def get_fail_num(row):
@@ -30,6 +31,6 @@ for i in hot_course:
 hot_course_mean_grade = pd.DataFrame(
     {'name': hot_course, 'course_type': course_type, 'grade': course_mean_grade, 'fail_rate': fail_rate})
 
-hot_course_mean_grade.to_excel(path + '/res/hot_course_grade.xlsx')
+hot_course_mean_grade.to_excel(dirname + '/res/course/hot_course_grade.xlsx')
 
 print('课程给分情况生成完毕')

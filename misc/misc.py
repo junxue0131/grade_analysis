@@ -1,9 +1,14 @@
 import pandas as pd
+import os
 
-path = 'C:/Users/Xue/Desktop/ing/第二学期成绩分析/'
 
-grades = pd.read_csv(path + 'final_grade_table.csv')
+dirname = os.getcwd()
 
+dirname = dirname.replace('\\', '/')
+
+grades = pd.read_excel(dirname + '/res/final_grade_table.xlsx')
+
+print('正在生成上课最多的老师统计...')
 
 # 统计上课最多的老师
 teachers = grades.drop_duplicates('name')['instructor'].value_counts()[:10]
@@ -23,4 +28,6 @@ def match_college(row):
 
 teachers['college'] = teachers.apply(match_college, axis=1)
 
-teachers.to_excel(path+'/res/misc/teacher.xlsx')
+teachers.to_excel(dirname + '/res/misc/teacher.xlsx')
+
+print('上课最多的老师统计结果生成完成')

@@ -1,8 +1,12 @@
 import pandas as pd
+import os
 
-path = 'C:/Users/Xue/Desktop/ing/第二学期成绩分析/'
 
-grades = pd.read_csv(path + 'final_grade_table.csv')
+dirname = os.getcwd()
+
+dirname = dirname.replace('\\', '/')
+
+grades = pd.read_excel(dirname + '/res/final_grade_table.xlsx')
 
 print('开始生成学院平均GPA...')
 
@@ -24,7 +28,7 @@ for j in years:
 
 college_GPA = pd.DataFrame({'college': college, 'gpa': gpa_list, 'year': year})
 
-college_GPA.groupby(['college', 'year'])['gpa'].mean().to_excel(path+'res/gpa/college_average_gpa.xlsx')
+college_GPA.groupby(['college', 'year'])['gpa'].mean().to_excel(dirname + '/res/gpa/college_average_gpa.xlsx')
 
 
 print('学院平均GPA生成完毕')
