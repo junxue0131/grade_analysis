@@ -3,7 +3,7 @@ import os
 
 dirname = os.getcwd()
 
-grades = pd.read_excel(dirname.replace('\\', '/') + '/res/final_grade_table.xlsx')
+grades = pd.read_csv(dirname.replace('\\', '/') + '/res/final_grade_table.csv')
 
 print('正在生成课程给分情况...')
 
