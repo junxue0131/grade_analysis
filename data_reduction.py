@@ -178,6 +178,6 @@ if __name__ == '__main__':
     print('列名重命名完成')
 
     # generate final grade_table
-    grades.to_excel(dirname.replace('\\', '/') + '/res/final_grade_table.xlsx')
+    grades.to_csv(dirname.replace('\\', '/') + '/res/final_grade_table.csv')
 
-    print('文件保存成功:' + dirname.replace('\\', '/') + '/res/final_grade_table.xlsx')
+    print('文件保存成功:' + dirname.replace('\\', '/') + '/res/final_grade_table.csv')

@@ -6,7 +6,7 @@ dirname = os.getcwd()
 
 dirname = dirname.replace('\\', '/')
 
-grades = pd.read_excel(dirname + '/res/final_grade_table.xlsx')
+grades = pd.read_csv(dirname + '/res/final_grade_table.csv')
 
 print('开始生成学院平均GPA...')
 
